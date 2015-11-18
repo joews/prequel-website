@@ -1,0 +1,30 @@
+{
+  "name": "prequel-website",
+  "version": "1.0.0",
+  "description": "Live demo of https://github.com/jwhitfieldseed/prequel",
+  "scripts": {
+    "start": "budo app.js:bundle.js --live -- -t babelify | garnish",
+    "build": "browserify app.js -t babelify | uglifyjs -cm > bundle.js"
+  },
+  "private": true,
+  "dependencies": {
+    "prequel": "git+ssh://git@github.com/jwhitfieldseed/prequel.git",
+    "whatwg-fetch": "^0.10.1"
+  },
+  "devDependencies": {
+    "browserify": "^11.2.0",
+    "budo": "^5.1.5",
+    "babelify": "^6.4.0",
+    "garnish": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwhitfieldseed/prequel-website.git"
+  },
+  "author": "Joe Whitfield-Seed",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jwhitfieldseed/prequel-website/issues"
+  },
+  "homepage": "https://github.com/jwhitfieldseed/prequel-website#readme"
+}
