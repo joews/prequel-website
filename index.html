@@ -7,8 +7,9 @@
   </head>
   <body>
     <textarea class="textarea js-data">Loading...</textarea>
-    <textarea class="textarea js-query">SELECT name, url FROM ${data} WHERE stargazers_count > 10000 ORDER BY stargazers_count DESC LIMIT 10</textarea>
+    <textarea class="textarea js-query">sql`SELECT name, url FROM ${data} WHERE stargazers_count > 10000 ORDER BY stargazers_count DESC LIMIT 10`</textarea>
     <textarea class="textarea js-result"></textarea>
+    
     <script src="bundle.js" async></script>
   </body>
 </html>

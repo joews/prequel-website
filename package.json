@@ -4,7 +4,9 @@
   "description": "Live demo of https://github.com/jwhitfieldseed/prequel",
   "scripts": {
     "start": "budo app.js:bundle.js --live -- -t babelify | garnish",
-    "build": "browserify app.js -t babelify | uglifyjs -cm > bundle.js"
+    "build": "browserify app.js -t babelify | uglifyjs -cm > bundle.js",
+    "pre-deploy": "npm run build",
+    "deploy": "git checkout gh-pages && git commit -am 'publish to gh-pages'"
   },
   "private": true,
   "dependencies": {
@@ -12,10 +14,11 @@
     "whatwg-fetch": "^0.10.1"
   },
   "devDependencies": {
+    "babelify": "^6.4.0",
     "browserify": "^11.2.0",
     "budo": "^5.1.5",
-    "babelify": "^6.4.0",
-    "garnish": "^3.2.1"
+    "garnish": "^3.2.1",
+    "uglifyjs": "^2.4.10"
   },
   "repository": {
     "type": "git",
